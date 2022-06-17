@@ -500,7 +500,7 @@ ul.ulist li {
   left: 68px !important;
   max-width: 100%;
   max-height: 100%;
-  opacity: 0.33;
+  opacity: 0.55;
 }
 
 #slide2 .header-wrapper,
@@ -556,6 +556,11 @@ ul.ulist li {
 }
 #slide3 .header-wrapper .logo-container {
   align-items: start;
+}
+#slide3 .header-wrapper .content-wrapper {
+  height: 80vh;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 #slide3 .header-wrapper #headersvg {
   position: absolute;
@@ -698,6 +703,10 @@ section[data-fragment="0"] .mainlist h2[data-fragment-index="1"],
   }
   #slide1 .header-wrapper .left-box {
     height: 50%;
+    max-height: 40vh;
+  }
+  #slide1 .header-wrapper #bg-f {
+    max-height: 45vh;
   }
 
   #slide2 .content-wrapper {
@@ -711,7 +720,7 @@ section[data-fragment="0"] .mainlist h2[data-fragment-index="1"],
 
   #slide3 .header-wrapper .logo-container {
     align-items: center;
-    flex-wrap: wrap;
+    /*   flex-wrap: wrap; */
   }
 
   #slide3 .logo-container .logo-stack {
