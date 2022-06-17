@@ -12,6 +12,17 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<script>
+		if (screen && screen.width > 680) {
+
+			document.write('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"><\/script>');
+			document.write('<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vanta@0.5.22/dist/vanta.globe.min.js"><\/script>');
+	
+		}
+		</script>
+		
+
+		
 		
 	</head>
 	<body>
@@ -36,7 +47,6 @@
 						<div id="bg-f" class="logo-container frame-1">
 							<img style="transform: scale(1.2);" src="assets/images/cmcm_logo_lb.svg" alt="">
 							<img src="assets/images/Sita_Software-RVB.svg" alt="">
-							
 						</div>
 					</div>
 					<div class="content-wrapper"></div>
@@ -48,20 +58,20 @@
 							<img src="assets/images/Sita_Software-RVB.svg" alt="">
 						</div>
 					</div>
-					<div class="fragment content-wrapper product-container">
+					<div class="content-wrapper product-container">
 						<img  class="fade-up erp" src="assets/images/Icone_azur_ERP+.svg" alt="">
 						<img class="fade-up" src="assets/images/Icone_azur_Health.svg" alt="">
 					</div>
 					
 				</section>
-
+				
 				<section id="slide3" data-auto-animate data-background-gradient="linear-gradient(0deg, rgba(1,122,254, 0.58) 0%, rgba(255,255,255,1) 100%)">
 					<div class="header-wrapper">
 						<div class="logo-container">
-							<h1 class="">Agenda</h1>
+							<h1 class=""agenda-title>Agenda</h1>
 							<div class="logo-stack">
-								<img  style="transform: scale(1.2);" src="assets/images/cmcm_logo_lb.svg" alt="">
-								<img src="assets/images/Sita_Software-RVB.svg" alt="">
+								<img  class="cmcm-logo" src="assets/images/cmcm_logo_lb.svg" alt="">
+								<img class="sita-logo"src="assets/images/Sita_Software-RVB.svg" alt="">
 							</div>	
 						</div>
 						<svg id="headersvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -210,7 +220,7 @@
 					</section>
 				</section>
 
-				<section id="slide4" data-auto-animate data-background-gradient="linear-gradient(354deg, rgba(1,122,254,0.62) 0%, rgba(255,255,255,1) 100%)">
+				<section id="slide4" data-auto-animate data-background-gradient="linear-gradient(354deg, rgba(1,122,254,0.32) 0%, rgba(255,255,255,1) 100%)">
 					<div class="header-wrapper">
 						<div class="logo-container">
 							<img  style="transform: scale(1.2);" src="assets/images/cmcm_logo_lb.svg" alt="">
@@ -225,9 +235,6 @@
 		</div>
 
 		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -236,10 +243,25 @@
 				hash: true,
 				height: '100%',
 				width: '100%',
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
+		<script>
+			if (window.matchMedia("(min-width: 680px)").matches) {
+				VANTA.GLOBE({
+				el: "#bg-f",
+				mouseControls: true,
+				touchControls: false,
+				gyroControls: false,
+				minHeight: 1300.00,
+				minWidth: 1300.00,
+				scale: 1.00,
+				scaleMobile: 1,
+				color: 0x0072CE,
+				color2:  0x1467ff,
+				backgroundColor: 0xffffff,
+				})
+			}
+		</script>	
 	</body>
 </html>
+
