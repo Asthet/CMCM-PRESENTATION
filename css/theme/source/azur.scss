@@ -117,7 +117,8 @@ $heading4Size: 1em;
         align-items: center;
         justify-content: flex-end;
         height: 80%;
-        svg {
+        svg,
+        img {
           position: relative;
           left: 50px;
           max-width: 80%;
@@ -370,7 +371,27 @@ section[data-fragment="0"] .mainlist h2[data-fragment-index="1"],
   }
 }
 
+// Visibility Helper
+@media only screen and (min-width: 680px) {
+  .visible-on-desktop-only {
+    display: block;
+  }
+
+  .visible-on-mobile-only {
+    display: none;
+  }
+}
 @media only screen and (max-width: 680px) {
+  #slide1 .header-wrapper .left-box .left-box-body {
+    align-items: end;
+    justify-content: space-between;
+  }
+  .visible-on-mobile-only {
+    display: block;
+  }
+  .visible-on-desktop-only {
+    display: none;
+  }
   #slide3 .header-wrapper #headersvg {
     z-index: -1;
   }
@@ -403,7 +424,8 @@ section[data-fragment="0"] .mainlist h2[data-fragment-index="1"],
     flex-direction: column;
   }
   #slide1 .header-wrapper .left-box .left-box-body span,
-  #slide1 .header-wrapper .left-box .left-box-body svg {
+  #slide1 .header-wrapper .left-box .left-box-body svg,
+  #slide1 .header-wrapper .left-box .left-box-body img {
     left: 0;
   }
   #slide3 .header-wrapper .logo-container {
