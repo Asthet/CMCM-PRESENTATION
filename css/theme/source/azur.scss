@@ -464,3 +464,21 @@ section[data-fragment="0"] .mainlist h2[data-fragment-index="1"],
     font-size: 1.8rem;
   }
 }
+
+#slide3:after {
+  content: "";
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(42deg, #2672ce, transparent);
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+.reveal .progress {
+  height: 8px;
+}
+
+.reveal .controls {
+  bottom: 28px;
+}
