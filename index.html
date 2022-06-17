@@ -12,12 +12,14 @@
 
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css" />
-    <script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vanta@0.5.22/dist/vanta.globe.min.js"></script>
+    <!-- <script>
       if (screen && screen.width > 680) {
         document.write('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"><\/script>');
         document.write('<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vanta@0.5.22/dist/vanta.globe.min.js"><\/script>');
       }
-    </script>
+    </script> -->
   </head>
   <body>
     <div class="reveal">
@@ -241,7 +243,20 @@
       });
     </script>
     <script>
-      if (window.matchMedia("(min-width: 680px)").matches) {
+      VANTA.GLOBE({
+        el: "#bg-f",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: true,
+        minHeight: 1300.0,
+        minWidth: 1300.0,
+        scale: 1.0,
+        scaleMobile: 1,
+        color: 0x0072ce,
+        color2: 0x1467ff,
+        backgroundColor: 0xffffff
+      });
+      /*  if (window.matchMedia("(min-width: 680px)").matches) {
         VANTA.GLOBE({
           el: "#bg-f",
           mouseControls: true,
@@ -255,7 +270,7 @@
           color2: 0x1467ff,
           backgroundColor: 0xffffff
         });
-      }
+      } */
     </script>
   </body>
 </html>
